@@ -9,27 +9,16 @@ const UpdateMovie = props => {
     console.log(movieTitle);
 
     const [formState, setFormState] = useState(
-        {
+    {
     title: "",
     director: "",
     id: params.id,
     metascore:"",
     stars: []
     }
-    )
-
-
-/*
-
-formState: {
-    director: ,
-    movie: ,
     
-}
+)
 
-setMovie([...movie, formState])
-
-*/ 
     
 const handleSubmit = e => {
     e.preventDefault();
@@ -45,6 +34,10 @@ const handleChange = e => {
 }
 
     return (
+
+        <div>
+            
+            {formState !== undefined ?
 
             <form onSubmit={e=> handleSubmit(e)}>
                 <label htmlFor="title">
@@ -63,9 +56,11 @@ const handleChange = e => {
                     Actors:
                     <input id="stars" type="text" name="stars" onChange={handleChange} value={formState.stars} />
                 </label>
+                {/* <input type="submit"/> */}
                 <button>Submit</button>
-            </form>
-
+            </form> : <h1>Update movie</h1>
+}
+        </div>
     )
 }
 

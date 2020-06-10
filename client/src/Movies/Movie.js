@@ -41,7 +41,8 @@ function Movie({ addToSavedList }) {
       {/* <div className="edit-button" onClick={editMovie}>
         Edit
       </div> */}
-      <Link to={`../update-movie/${movie.id}`}>Edit</Link>
+
+      <Link className="edit-button" to={`../update-movie/${movie.id}`}>Edit</Link>
     </div>
   );
 }
