@@ -12,6 +12,7 @@ function MovieList({ movies }) {
           </Link>
         ))
       }
+      <Link className="edit-button" to={`../add-movie/${movies.id}`}>Add</Link>
     </div>
   );
 }
