@@ -18,6 +18,10 @@ function Movie({ addToSavedList }) {
     addToSavedList(movie);
   };
 
+  const editMoivie = () => {
+
+  }
+
   useEffect(() => {
     fetchMovie(params.id);
   }, [params.id]);
@@ -32,6 +36,9 @@ function Movie({ addToSavedList }) {
 
       <div className="save-button" onClick={saveMovie}>
         Save
+      </div>
+      <div className="edit-button" onClick={editMoivie}>
+        Edit
       </div>
     </div>
   );
