@@ -35,10 +35,7 @@ const handleChange = e => {
 
     return (
 
-        <div>
-            
-            {formState !== undefined ?
-
+        <div>            
             <form onSubmit={e=> handleSubmit(e)}>
                 <label htmlFor="title">
                     Title:
@@ -56,10 +53,9 @@ const handleChange = e => {
                     Actors:
                     <input id="stars" type="text" name="stars" onChange={handleChange} value={formState.stars} />
                 </label>
-                {/* <input type="submit"/> */}
                 <button>Submit</button>
-            </form> : <h1>Update movie</h1>
-}
+            </form> 
+
         </div>
     )
 }
