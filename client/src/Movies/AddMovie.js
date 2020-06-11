@@ -28,13 +28,13 @@ const handleSubmit = e => {
     .catch(err => console.log(err))
 }
 const handleChange = e => {
-    setFormState({...formState, [e.target.name]: e.target.name === "stars" ? [e.target.value] : e.target.value})
+    setFormState({...formState, [e.target.name]: [e.target.value]})
 }
 
     return (
 
-        <div>            
-            <form onSubmit={e=> handleSubmit(e)}>
+        <div >            
+            <form className="form" onSubmit={e=> handleSubmit(e)}>
                 <label htmlFor="title">
                     Title:
                     <input id="title" type="text" name="title" onChange={handleChange} value={formState.title}  />

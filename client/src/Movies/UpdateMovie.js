@@ -36,7 +36,7 @@ const handleChange = e => {
     return (
 
         <div>            
-            <form onSubmit={e=> handleSubmit(e)}>
+            <form className="form" onSubmit={e=> handleSubmit(e)}>
                 <label htmlFor="title">
                     Title:
                     <input id="title" type="text" name="title" onChange={handleChange} value={formState.title}  />

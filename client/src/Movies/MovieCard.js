@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 
 const MovieCard = props => {
   const { title, director, metascore, stars } = props.movie;
@@ -14,6 +13,8 @@ const MovieCard = props => {
         Metascore: <strong>{metascore}</strong>
       </div>
       <h3>Actors</h3>
+      {console.log(stars)}
+ 
 
       {stars.map(star => (
         <div key={star} className="movie-star">
